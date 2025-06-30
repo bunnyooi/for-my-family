@@ -1,5 +1,5 @@
 async function findVideos() {
-  const apiKey = "AIzaSyCM8RI5sm03w5WEhVvpGmN_kh5cppcxyT0";
+ const apiKey = "YOUR_API_KEY"; // we'll set it securely later
   const keyword = document.getElementById('keyword').value;
   const minSubs = +document.getElementById('minSubs').value || 0;
   const maxSubs = +document.getElementById('maxSubs').value || 999999999;
