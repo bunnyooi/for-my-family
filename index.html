@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ForFamily - YouTube Filter Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎬 ForFamily - YouTube Filter Tool</h1>
+    <p>Filter by subscribers, views, upload time, country, and keywords</p>
+  </header>
+
+  <section class="filters">
+    <input type="text" id="keyword" placeholder="🔍 Search keyword (optional)">
+    <input type="number" id="minSubs" placeholder="Min subscribers">
+    <input type="number" id="maxSubs" placeholder="Max subscribers">
+    <input type="number" id="minViews" placeholder="Min views">
+    <input type="number" id="maxViews" placeholder="Max views">
+    <input type="number" id="daysAgo" placeholder="Upload within days (e.g. 30)">
+    <select id="country">
+      <option value="">🌎 Any Country</option>
+      <option value="PK">🇵🇰 Pakistan</option>
+      <option value="US">🇺🇸 USA</option>
+      <option value="IN">🇮🇳 India</option>
+      <option value="GB">🇬🇧 UK</option>
+    </select>
+    <button onclick="findVideos()">Find Videos</button>
+  </section>
+
+  <section>
+    <table id="resultsTable">
+      <thead>
+        <tr>
+          <th>Thumbnail</th>
+          <th>Title & Channel</th>
+          <th>Subscribers</th>
+          <th>Views</th>
+          <th>Upload Date</th>
+          <th>1st Video Date</th>
+          <th>Monetization</th>
+          <th>Boost %</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>Data fetched live from YouTube API. Monetization & boost % are estimated.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
